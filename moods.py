@@ -50,7 +50,7 @@ mappings = [
     },
     {
         'mood': upbeat_playlist,
-        'genres': [disco_house_playlist, disco_playlist, future_bass_playlist, edm_playlist]
+        'genres': [disco_house_playlist, disco_playlist, future_bass_playlist]
     },
     {
         'mood': funky_playlist,
@@ -58,11 +58,11 @@ mappings = [
     },
     {
         'mood': clubby_playlist,
-        'genres': [tech_house_playlist, dnb_playlist, bass_playlist]
+        'genres': [tech_house_playlist, bass_playlist, edm_playlist]
     },
     {
         'mood': breaks_playlist,
-        'genres': [jungle_playlist, liquid_playlist]
+        'genres': [jungle_playlist, liquid_playlist, dnb_playlist]
     },
     {
         'mood': deep_playlist,
