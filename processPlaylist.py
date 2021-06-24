@@ -15,7 +15,7 @@ def processPlaylist(id, callback):
     redirect_uri = 'https://google.com'
     username = '11136558335'
 
-    scope = 'playlist-modify-private'
+    scope = 'playlist-modify-public'
     token = util.prompt_for_user_token(username, scope, client_id, client_secret, redirect_uri)
 
     offset = 0
