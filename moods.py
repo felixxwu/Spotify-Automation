@@ -31,6 +31,7 @@ moods = [
 genres = [
     { 'name': 'Acid House',         'id': '2NzymlUWKrvI4htixiIs3C', 'moods': [deep_mood] },
     { 'name': 'Bass House',         'id': '1NPHecfqYaGA1WePqWokI0', 'moods': [clubby_mood] },
+    { 'name': 'Breakbeat',          'id': '6PB0CoDn4povX33QpmQ02e', 'moods': [deep_mood, breaks_mood] },
     { 'name': 'Chill R&B / Soul',   'id': '0UtKErAsSYJUHTc2zdnDPX', 'moods': [chill_mood] },
     { 'name': 'Chill House',        'id': '67f5NnFFo2q3L5RYZta5w7', 'moods': [chill_mood] },
     { 'name': 'Chillhop / Beats',   'id': '4Nq24gCbtioyKjAKD1INIL', 'moods': [chill_mood] },
