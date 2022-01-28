@@ -48,6 +48,7 @@ genres = [
     { 'name': 'Hip Hop / Grime',    'id': '5DNjq57hOo0HJ7oel2nMmI', 'moods': [urban_mood] },
     { 'name': 'Ibiza House',        'id': '6D8ZjY9YMfDqBTfAmkWOwj', 'moods': [clubby_mood] },
     { 'name': 'Jazz',               'id': '0rTmE7jxCO6ojsUue21SS5', 'moods': [chill_mood] },
+    { 'name': 'Jazz Funk',          'id': '0KZY0HStJkmOtwkSapnLKj', 'moods': [funky_mood] },
     { 'name': 'Jungle',             'id': '2edrfJyokLxCWXPnmkHOoa', 'moods': [breaks_mood] },
     { 'name': 'Liquid Drum & Bass', 'id': '1onEsTGHFBsk7IZ5sGSoaE', 'moods': [breaks_mood] },
     { 'name': 'Lofi House',         'id': '67irKHtgNLMKLgEnWMS93K', 'moods': [deep_mood] },
@@ -55,6 +56,7 @@ genres = [
     { 'name': 'Nu Funk',            'id': '03GNMqql4MbNf8GwsbVFYn', 'moods': [funky_mood] },
     { 'name': 'Progressive House',  'id': '6BUxoJGWtllzMdejzgfvHJ', 'moods': [electronic_mood] },
     { 'name': 'Tech House',         'id': '2FGMn8inH33crqXNTWMdyS', 'moods': [clubby_mood] },
+    { 'name': 'Techno',             'id': '12JxGTejUK5wOr7qZDTywX', 'moods': [clubby_mood] },
     { 'name': 'UK Garage',          'id': '6KSZa1AzLgKmrlCruKhmxR', 'moods': [urban_mood] },
 ]
 
