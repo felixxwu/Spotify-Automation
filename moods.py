@@ -1,5 +1,6 @@
 # set SPOTIPY_CLIENT_ID and SPOTIPY_CLIENT_SECRET environment variables
 
+import time
 import spotipy
 from pprint import pprint
 from spotipy.oauth2 import SpotifyClientCredentials
@@ -63,6 +64,32 @@ genres = [
 def addToMood(id, tracks):
     if len(tracks) > 0:
         response = sp.playlist_add_items(id, tracks)
+
+def exitIfRunTooFrequently():
+    fileName = 'lastRun.txt'
+
+    try:
+        file = open(fileName, 'r')
+        lastRun = float(file.read())
+        file.close()
+    except:
+        lastRun = 0
+
+    now = time.time()
+
+    file = open(fileName, 'w')
+    file.write(str(now))
+    file.close()
+
+    if now - lastRun < 86400: # less than a day
+        exit()
+
+
+
+
+# START ############################################################
+
+exitIfRunTooFrequently()
 
 # clear mood playlists
 for mood in moods:
