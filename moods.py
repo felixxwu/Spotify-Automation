@@ -8,15 +8,17 @@ from spotipy.oauth2 import SpotifyOAuth
 import json
 import spotipy.util as util
 from processPlaylist import processPlaylist
+import sys
 
-urban_mood      = {'id': '6QyPXogZHDElyNcXRf14oN', 'name': 'Beats and Vibes'}
-upbeat_mood     = {'id': '6ip96AlGVRpb41U8cOudo6', 'name': 'Upbeat Grooves'}
-funky_mood      = {'id': '3Xw80hGkazf4qOPIw30SpJ', 'name': 'Funky Fresh'}
-clubby_mood     = {'id': '3o2U5B7cvlFspKuFEDJyhq', 'name': 'Heavy Hitters'}
-breaks_mood     = {'id': '62RrxLSRtbJAhiQAPu0jEh', 'name': 'Rave Breaks'}
-deep_mood       = {'id': '6mBSlC6XZHSL0UyWFAGUGO', 'name': 'Deep and Soulful'}
-chill_mood      = {'id': '6dtETOTmLhXAZZZa2DH9Cb', 'name': 'Laid-back Chill'}
-electronic_mood = {'id': '0Y2InqMR3vNJeRvvttZfR9', 'name': 'Electronic Goodness'}
+urban_mood        = {'id': '6QyPXogZHDElyNcXRf14oN', 'name': 'Beats and Vibes'}
+upbeat_mood       = {'id': '6ip96AlGVRpb41U8cOudo6', 'name': 'Upbeat Grooves'}
+funky_mood        = {'id': '3Xw80hGkazf4qOPIw30SpJ', 'name': 'Funky Fresh'}
+clubby_mood       = {'id': '3o2U5B7cvlFspKuFEDJyhq', 'name': 'Heavy Hitters'}
+breaks_mood       = {'id': '62RrxLSRtbJAhiQAPu0jEh', 'name': 'Rave Breaks'}
+deep_mood         = {'id': '6mBSlC6XZHSL0UyWFAGUGO', 'name': 'Deep and Soulful'}
+chill_mood        = {'id': '6dtETOTmLhXAZZZa2DH9Cb', 'name': 'Laid-back Chill'}
+electronic_mood   = {'id': '0Y2InqMR3vNJeRvvttZfR9', 'name': 'Electronic Goodness'}
+release_discovery = {'id': '1MEp4PrZZUdwUnEGvT7qYb', 'name': 'Release + Discovery'}
 
 moods = [
     urban_mood,
@@ -27,6 +29,7 @@ moods = [
     deep_mood,
     chill_mood,
     electronic_mood,
+    release_discovery,
 ]
 
 genres = [
@@ -59,6 +62,8 @@ genres = [
     { 'name': 'Tech House',         'id': '2FGMn8inH33crqXNTWMdyS', 'moods': [clubby_mood] },
     { 'name': 'Techno',             'id': '12JxGTejUK5wOr7qZDTywX', 'moods': [clubby_mood] },
     { 'name': 'UK Garage',          'id': '6KSZa1AzLgKmrlCruKhmxR', 'moods': [urban_mood] },
+    { 'name': 'Release Radar',      'id': '37i9dQZEVXbwcRCxi05N0l', 'moods': [release_discovery] },
+    { 'name': 'Discover Weekly',    'id': '37i9dQZEVXcJVkLihw7Abc', 'moods': [release_discovery] },
 ]
 
 def addToMood(id, tracks):
@@ -89,7 +94,8 @@ def exitIfRunTooFrequently():
 
 # START ############################################################
 
-exitIfRunTooFrequently()
+if not (len(sys.argv) > 1 and sys.argv[1] == '-f'):
+    exitIfRunTooFrequently()
 
 # clear mood playlists
 for mood in moods:
