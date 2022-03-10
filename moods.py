@@ -82,12 +82,12 @@ def exitIfRunTooFrequently():
 
     now = time.time()
 
+    if now - lastRun < 86400: # less than a day
+        exit()
+
     file = open(fileName, 'w')
     file.write(str(now))
     file.close()
-
-    if now - lastRun < 86400: # less than a day
-        exit()
 
 
 
