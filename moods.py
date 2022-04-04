@@ -19,6 +19,7 @@ deep_mood         = {'id': '6mBSlC6XZHSL0UyWFAGUGO', 'name': 'Deep and Soulful'}
 chill_mood        = {'id': '6dtETOTmLhXAZZZa2DH9Cb', 'name': 'Laid-back Chill'}
 electronic_mood   = {'id': '0Y2InqMR3vNJeRvvttZfR9', 'name': 'Electronic Goodness'}
 release_discovery = {'id': '1MEp4PrZZUdwUnEGvT7qYb', 'name': 'Release + Discovery'}
+all_daily_mixes   = {'id': '1QacCtP1WONJMnLEKY1Bbq', 'name': 'All Daily Mixes'}
 
 moods = [
     urban_mood,
@@ -30,6 +31,7 @@ moods = [
     chill_mood,
     electronic_mood,
     release_discovery,
+    all_daily_mixes,
 ]
 
 genres = [
@@ -62,8 +64,15 @@ genres = [
     { 'name': 'Tech House',         'id': '2FGMn8inH33crqXNTWMdyS', 'moods': [clubby_mood] },
     { 'name': 'Techno',             'id': '12JxGTejUK5wOr7qZDTywX', 'moods': [clubby_mood] },
     { 'name': 'UK Garage',          'id': '6KSZa1AzLgKmrlCruKhmxR', 'moods': [urban_mood] },
+
     { 'name': 'Release Radar',      'id': '37i9dQZEVXbwcRCxi05N0l', 'moods': [release_discovery] },
     { 'name': 'Discover Weekly',    'id': '37i9dQZEVXcJVkLihw7Abc', 'moods': [release_discovery] },
+    { 'name': 'Daily Mix 1',        'id': '37i9dQZF1E36zB6IBvTA1Z', 'moods': [all_daily_mixes] },
+    { 'name': 'Daily Mix 2',        'id': '37i9dQZF1E35FNp3AjwoD1', 'moods': [all_daily_mixes] },
+    { 'name': 'Daily Mix 3',        'id': '37i9dQZF1E38m7THoFLkuH', 'moods': [all_daily_mixes] },
+    { 'name': 'Daily Mix 4',        'id': '37i9dQZF1E3711IypgUARZ', 'moods': [all_daily_mixes] },
+    { 'name': 'Daily Mix 5',        'id': '37i9dQZF1E39Ehtni1Mgnb', 'moods': [all_daily_mixes] },
+    { 'name': 'Daily Mix 6',        'id': '37i9dQZF1E39ZTGCFZcqaE', 'moods': [all_daily_mixes] },
 ]
 
 def addToMood(id, tracks):
