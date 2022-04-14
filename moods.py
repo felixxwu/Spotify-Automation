@@ -20,8 +20,9 @@ chill_mood        = {'id': '6dtETOTmLhXAZZZa2DH9Cb', 'name': 'Laid-back Chill'}
 electronic_mood   = {'id': '0Y2InqMR3vNJeRvvttZfR9', 'name': 'Electronic Goodness'}
 release_discovery = {'id': '1MEp4PrZZUdwUnEGvT7qYb', 'name': 'Release + Discovery'}
 all_daily_mixes   = {'id': '1QacCtP1WONJMnLEKY1Bbq', 'name': 'All Daily Mixes'}
+favs              = {'id': '1gL61UZJBSaoRRiLpHpwhR', 'name': 'Favs'}
 
-moods = [
+destinations = [
     urban_mood,
     upbeat_mood,
     funky_mood,
@@ -32,47 +33,88 @@ moods = [
     electronic_mood,
     release_discovery,
     all_daily_mixes,
+    favs,
 ]
 
-genres = [
-    { 'name': 'Acid House',         'id': '2NzymlUWKrvI4htixiIs3C', 'moods': [deep_mood] },
-    { 'name': 'Bass House',         'id': '1NPHecfqYaGA1WePqWokI0', 'moods': [clubby_mood] },
-    { 'name': 'Breakbeat',          'id': '6PB0CoDn4povX33QpmQ02e', 'moods': [deep_mood, breaks_mood] },
-    { 'name': 'Chill R&B / Soul',   'id': '0UtKErAsSYJUHTc2zdnDPX', 'moods': [chill_mood] },
-    { 'name': 'Chill House',        'id': '67f5NnFFo2q3L5RYZta5w7', 'moods': [chill_mood] },
-    { 'name': 'Chillhop / Beats',   'id': '4Nq24gCbtioyKjAKD1INIL', 'moods': [chill_mood] },
-    { 'name': 'Deep House',         'id': '2qyLVxWBh4vQCF9DwCk902', 'moods': [deep_mood] },
-    { 'name': 'Disco',              'id': '7dxDjILCeSVrjVpzvDv729', 'moods': [upbeat_mood] },
-    { 'name': 'Disco House',        'id': '2E6LKDR37X50mjgS7pzXsT', 'moods': [upbeat_mood, funky_mood] },
-    { 'name': 'Drum & Bass',        'id': '4UI4KdZo6nK3rvE2NJffR7', 'moods': [breaks_mood] },
-    { 'name': 'Funky House',        'id': '6oT10NgHvsFLczeWgGgQxd', 'moods': [funky_mood] },
-    { 'name': 'Future Bass',        'id': '00MdAHM17nugGL6n7vdJO8', 'moods': [electronic_mood] },
-    { 'name': 'Future Beats',       'id': '5RucBBOskc1Hk4zTEeO0xR', 'moods': [urban_mood] },
-    { 'name': 'Future House',       'id': '2WHhRbzPCHFr1MNCyLnfPl', 'moods': [electronic_mood] },
-    { 'name': 'Groovy / Soul',      'id': '4vfmQDn8KcjFkitbsXTnx9', 'moods': [funky_mood, upbeat_mood] },
-    { 'name': 'Halftime / Bass',    'id': '7Cx3FApTEjoAJy5gn3m25V', 'moods': [electronic_mood] },
-    { 'name': 'Hip Hop / Grime',    'id': '5DNjq57hOo0HJ7oel2nMmI', 'moods': [urban_mood] },
-    { 'name': 'Ibiza House',        'id': '6D8ZjY9YMfDqBTfAmkWOwj', 'moods': [clubby_mood] },
-    { 'name': 'Jazz',               'id': '0rTmE7jxCO6ojsUue21SS5', 'moods': [chill_mood] },
-    { 'name': 'Jazz Funk',          'id': '0KZY0HStJkmOtwkSapnLKj', 'moods': [funky_mood] },
-    { 'name': 'Jungle',             'id': '2edrfJyokLxCWXPnmkHOoa', 'moods': [breaks_mood] },
-    { 'name': 'Liquid Drum & Bass', 'id': '1onEsTGHFBsk7IZ5sGSoaE', 'moods': [breaks_mood] },
-    { 'name': 'Lofi House',         'id': '67irKHtgNLMKLgEnWMS93K', 'moods': [deep_mood] },
-    { 'name': 'Minimal Techno',     'id': '54LXniLpAy2UArsQH7i7tX', 'moods': [deep_mood] },
-    { 'name': 'Nu Funk',            'id': '03GNMqql4MbNf8GwsbVFYn', 'moods': [funky_mood] },
-    { 'name': 'Progressive House',  'id': '6BUxoJGWtllzMdejzgfvHJ', 'moods': [electronic_mood] },
-    { 'name': 'Tech House',         'id': '2FGMn8inH33crqXNTWMdyS', 'moods': [clubby_mood] },
-    { 'name': 'Techno',             'id': '12JxGTejUK5wOr7qZDTywX', 'moods': [clubby_mood] },
-    { 'name': 'UK Garage',          'id': '6KSZa1AzLgKmrlCruKhmxR', 'moods': [urban_mood] },
+sources = [
+    { 'name': 'Acid House',         'id': '2NzymlUWKrvI4htixiIs3C', 'destinations': [deep_mood] },
+    { 'name': 'Bass House',         'id': '1NPHecfqYaGA1WePqWokI0', 'destinations': [clubby_mood] },
+    { 'name': 'Breakbeat',          'id': '6PB0CoDn4povX33QpmQ02e', 'destinations': [deep_mood, breaks_mood] },
+    { 'name': 'Chill R&B / Soul',   'id': '0UtKErAsSYJUHTc2zdnDPX', 'destinations': [chill_mood] },
+    { 'name': 'Chill House',        'id': '67f5NnFFo2q3L5RYZta5w7', 'destinations': [chill_mood] },
+    { 'name': 'Chillhop / Beats',   'id': '4Nq24gCbtioyKjAKD1INIL', 'destinations': [chill_mood] },
+    { 'name': 'Deep House',         'id': '2qyLVxWBh4vQCF9DwCk902', 'destinations': [deep_mood] },
+    { 'name': 'Disco',              'id': '7dxDjILCeSVrjVpzvDv729', 'destinations': [upbeat_mood] },
+    { 'name': 'Disco House',        'id': '2E6LKDR37X50mjgS7pzXsT', 'destinations': [upbeat_mood, funky_mood] },
+    { 'name': 'Drum & Bass',        'id': '4UI4KdZo6nK3rvE2NJffR7', 'destinations': [breaks_mood] },
+    { 'name': 'Float House',        'id': '54LXniLpAy2UArsQH7i7tX', 'destinations': [deep_mood] },
+    { 'name': 'Funky House',        'id': '6oT10NgHvsFLczeWgGgQxd', 'destinations': [funky_mood] },
+    { 'name': 'Future Bass',        'id': '00MdAHM17nugGL6n7vdJO8', 'destinations': [electronic_mood] },
+    { 'name': 'Future Beats',       'id': '5RucBBOskc1Hk4zTEeO0xR', 'destinations': [urban_mood] },
+    { 'name': 'Future House',       'id': '2WHhRbzPCHFr1MNCyLnfPl', 'destinations': [electronic_mood] },
+    { 'name': 'Groovy / Soul',      'id': '4vfmQDn8KcjFkitbsXTnx9', 'destinations': [funky_mood, upbeat_mood] },
+    { 'name': 'Halftime / Bass',    'id': '7Cx3FApTEjoAJy5gn3m25V', 'destinations': [electronic_mood] },
+    { 'name': 'Hip Hop / Grime',    'id': '5DNjq57hOo0HJ7oel2nMmI', 'destinations': [urban_mood] },
+    { 'name': 'Ibiza House',        'id': '6D8ZjY9YMfDqBTfAmkWOwj', 'destinations': [clubby_mood] },
+    { 'name': 'Jazz',               'id': '0rTmE7jxCO6ojsUue21SS5', 'destinations': [chill_mood] },
+    { 'name': 'Jazz Funk',          'id': '0KZY0HStJkmOtwkSapnLKj', 'destinations': [funky_mood] },
+    { 'name': 'Jungle',             'id': '2edrfJyokLxCWXPnmkHOoa', 'destinations': [breaks_mood] },
+    { 'name': 'Liquid Drum & Bass', 'id': '1onEsTGHFBsk7IZ5sGSoaE', 'destinations': [breaks_mood] },
+    { 'name': 'Lofi House',         'id': '67irKHtgNLMKLgEnWMS93K', 'destinations': [deep_mood] },
+    { 'name': 'Nu Funk',            'id': '03GNMqql4MbNf8GwsbVFYn', 'destinations': [funky_mood] },
+    { 'name': 'Progressive House',  'id': '6BUxoJGWtllzMdejzgfvHJ', 'destinations': [electronic_mood] },
+    { 'name': 'Tech House',         'id': '2FGMn8inH33crqXNTWMdyS', 'destinations': [clubby_mood] },
+    { 'name': 'Techno',             'id': '12JxGTejUK5wOr7qZDTywX', 'destinations': [clubby_mood] },
+    { 'name': 'UK Garage',          'id': '6KSZa1AzLgKmrlCruKhmxR', 'destinations': [urban_mood] },
 
-    { 'name': 'Release Radar',      'id': '37i9dQZEVXbwcRCxi05N0l', 'moods': [release_discovery] },
-    { 'name': 'Discover Weekly',    'id': '37i9dQZEVXcJVkLihw7Abc', 'moods': [release_discovery] },
-    { 'name': 'Daily Mix 1',        'id': '37i9dQZF1E36zB6IBvTA1Z', 'moods': [all_daily_mixes] },
-    { 'name': 'Daily Mix 2',        'id': '37i9dQZF1E35FNp3AjwoD1', 'moods': [all_daily_mixes] },
-    { 'name': 'Daily Mix 3',        'id': '37i9dQZF1E38m7THoFLkuH', 'moods': [all_daily_mixes] },
-    { 'name': 'Daily Mix 4',        'id': '37i9dQZF1E3711IypgUARZ', 'moods': [all_daily_mixes] },
-    { 'name': 'Daily Mix 5',        'id': '37i9dQZF1E39Ehtni1Mgnb', 'moods': [all_daily_mixes] },
-    { 'name': 'Daily Mix 6',        'id': '37i9dQZF1E39ZTGCFZcqaE', 'moods': [all_daily_mixes] },
+
+
+    { 'name': 'Drum & Bass Favs',        'id': '1ygT1VOEKgZjzuhrh6CDXB', 'destinations': [favs] },
+    { 'name': 'Jungle Favs',             'id': '68vNpnlIYpNZQwWG8q6Owc', 'destinations': [favs] },
+    { 'name': 'Liquid Drum & Bass Favs', 'id': '2gwDNAq63WDUnqhd8lB3XB', 'destinations': [favs] },
+    { 'name': 'Halftime / Bass Favs',    'id': '2ZQXMeR2KnpPfeZABkMWvQ', 'destinations': [favs] },
+
+    { 'name': 'Tech House Favs',         'id': '4eTR1fDylaA1cmxboyHvFi', 'destinations': [favs] },
+    { 'name': 'Bass House Favs',         'id': '0PbEKyrsS02IgsNwwmJufP', 'destinations': [favs] },
+    { 'name': 'Deep House Favs',         'id': '4Q1P934932QR8vy9xj4rhr', 'destinations': [favs] },
+    { 'name': 'Acid House Favs',         'id': '3dNr4pN9sO3FS1ipcItsFT', 'destinations': [favs] },
+
+    { 'name': 'Ibiza House Favs',        'id': '0Lp9Tm5WpZFKRvarL6qNtd', 'destinations': [favs] },
+    { 'name': 'Disco House Favs',        'id': '105MPwNzym9UetKNoYljUG', 'destinations': [favs] },
+    { 'name': 'Funky House Favs',        'id': '7dRmcCQcYxJYn7anrPZnrW', 'destinations': [favs] },
+    
+    { 'name': 'Float House Favs',        'id': '3NJAJkhSjwkMV719YwVR19', 'destinations': [favs] },
+    { 'name': 'Lofi House Favs',         'id': '4zd6RUBMoOcvljMKxJDlLs', 'destinations': [favs] },
+    { 'name': 'Chill House Favs',        'id': '3NIcjGeoe523EgwFref8ra', 'destinations': [favs] },
+
+    { 'name': 'Future House Favs',       'id': '0faX1DXvp4VmY97NT0Uv2F', 'destinations': [favs] },
+    { 'name': 'Progressive House Favs',  'id': '3j6IkQNR7EUZPZj8uvuwya', 'destinations': [favs] },
+    { 'name': 'Future Bass Favs',        'id': '2RooblzkBz9y7T1uDUi046', 'destinations': [favs] },
+
+    { 'name': 'Breakbeat Favs',          'id': '5SO30bU406ejFVOHUcRaaf', 'destinations': [favs] },
+    { 'name': 'UK Garage Favs',          'id': '27XBSE3WxBWmll9lGTwJFx', 'destinations': [favs] },
+    { 'name': 'Hip Hop / Grime Favs',    'id': '4LLs77ShlJW9365YtVY868', 'destinations': [favs] },
+    { 'name': 'Future Beats Favs',       'id': '47PpzzJNVTKb5UBIbFWG1j', 'destinations': [favs] },
+
+    { 'name': 'Groovy / Soul Favs',      'id': '7wuKBNdYd306OTDvKa5RPc', 'destinations': [favs] },
+    { 'name': 'Chill R&B / Soul Favs',   'id': '5Z3OkNGtSSsHdhN0S9SPKD', 'destinations': [favs] },
+    { 'name': 'Disco Favs',              'id': '3Q14GKIjGkqs7SpSJN5ts3', 'destinations': [favs] },
+    { 'name': 'Chillhop / Beats Favs',   'id': '1dnNccPZTcTLfQzxrUmLGB', 'destinations': [favs] },
+
+    { 'name': 'Jazz Favs',               'id': '7LN7s4SL4ZWOC5fA08n2Cm', 'destinations': [favs] },
+    { 'name': 'Jazz Funk Favs',          'id': '333oE61YVycXCALSw6iyhF', 'destinations': [favs] },
+    { 'name': 'Nu Funk Favs',            'id': '54hDW0y41irql0Lx0vTDgT', 'destinations': [favs] },
+
+
+
+    { 'name': 'Release Radar',      'id': '37i9dQZEVXbwcRCxi05N0l', 'destinations': [release_discovery] },
+    { 'name': 'Discover Weekly',    'id': '37i9dQZEVXcJVkLihw7Abc', 'destinations': [release_discovery] },
+    { 'name': 'Daily Mix 1',        'id': '37i9dQZF1E36zB6IBvTA1Z', 'destinations': [all_daily_mixes] },
+    { 'name': 'Daily Mix 2',        'id': '37i9dQZF1E35FNp3AjwoD1', 'destinations': [all_daily_mixes] },
+    { 'name': 'Daily Mix 3',        'id': '37i9dQZF1E38m7THoFLkuH', 'destinations': [all_daily_mixes] },
+    { 'name': 'Daily Mix 4',        'id': '37i9dQZF1E3711IypgUARZ', 'destinations': [all_daily_mixes] },
+    { 'name': 'Daily Mix 5',        'id': '37i9dQZF1E39Ehtni1Mgnb', 'destinations': [all_daily_mixes] },
+    { 'name': 'Daily Mix 6',        'id': '37i9dQZF1E39ZTGCFZcqaE', 'destinations': [all_daily_mixes] },
 ]
 
 def addToMood(id, tracks):
@@ -107,20 +149,20 @@ if not (len(sys.argv) > 1 and sys.argv[1] == '-f'):
     exitIfRunTooFrequently()
 
 # clear mood playlists
-for mood in moods:
+for destination in destinations:
     scope = 'playlist-modify-public'
     sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
-    sp.playlist_replace_items(mood['id'], [])
+    sp.playlist_replace_items(destination['id'], [])
 
-for genre in genres:
+for source in sources:
 
-    for mood in genre['moods']:
-        print(genre['name'] + ' -> ' + mood['name'])
+    for destination in source['destinations']:
+        print(source['name'] + ' -> ' + destination['name'])
 
         def callback(response, sp):
             tracks = []
             for track in response['items']:
                 tracks.append(track['track']['id'])
-            addToMood(mood['id'], tracks)
+            addToMood(destination['id'], tracks)
 
-        processPlaylist(genre['id'], callback)
+        processPlaylist(source['id'], callback)
