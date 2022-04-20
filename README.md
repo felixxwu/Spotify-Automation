@@ -6,6 +6,8 @@ Automatically merge playlists together.
 
 Open `run.py` in a text editor and modify the `config` variable with Spotify links of playlists you want to merge.
 
+![Config](/images/config.png "Config")
+
 ## Setup
 
 To get started, create a new app at https://developer.spotify.com/dashboard, any app name will do.
