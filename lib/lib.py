@@ -46,19 +46,19 @@ def authenticate():
     redirect_uri = readSecret('redirect', '', True, 'Enter the redirect URL you set up your app with, you can use https://google.com')
     username = readSecret('username', '', True, 'Enter your Spotify Username, find yours at https://spotify.com/account/overview')
 
-    scope = 'playlist-modify-public'
-    util.prompt_for_user_token(username, scope, client_id, client_secret, redirect_uri)
+    scope = 'playlist-modify-public playlist-modify-private'
+    return util.prompt_for_user_token(username, scope, client_id, client_secret, redirect_uri)
 
 
 def processPlaylist(id, callback):
-    authenticate()
+    token = authenticate()
     
     pl_id = f'spotify:playlist:{id}'
 
     offset = 0
     while True:
         ### get response
-        sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials())
+        sp = spotipy.Spotify(auth=token)
         response = sp.playlist_items(pl_id,
                                     offset=offset,
                                     fields='items.track.id,total',
@@ -90,8 +90,8 @@ def transfer(fr, to):
     processPlaylist(fr, callback)
 
 def clear(id):
-    scope = 'playlist-modify-public'
-    sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
+    token = authenticate()
+    sp = spotipy.Spotify(auth=token)
     sp.playlist_replace_items(id, [])
 
 def start(config):

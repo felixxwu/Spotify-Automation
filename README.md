@@ -36,9 +36,7 @@ The first run of the script will ask you for a bunch of information to connect y
 
 5. You'll be redirected to Google with an authentication token in the URL. It will look something like `https://www.google.com/?code=AQCBDymSKeCEo_vA...` Copy the entire URL and paste it back into the terminal.
 
-6. You'll be redirected one more time to Google with a second authentication token. Copy this into the terminal again.
-
-7. You're all set! Subsequent runs will skip all of these steps as the information will be saved locally.
+6. You're all set! Subsequent runs will skip all of these steps as the information will be saved locally.
 
 ## Subsequent Runs
 
